@@ -1,0 +1,46 @@
+.jumbotron #home-title {
+	text-align: center;
+}
+
+.jumbotron #home-tagline {
+	text-align: center;
+}
+
+.sidebar {
+	clear: both;
+	background-color: #B5B4B5;
+	height: 1000px;
+}
+
+.sidebar .header {
+	margin: auto;
+	padding-top: 15px;
+}
+
+.sidebar .header .title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.sidebar .header .new-chat-room {
+	text-align: center;
+}
+
+.sidebar .rooms-list {
+	margin: auto;
+	padding-top: 15px;
+}
+
+.sidebar .rooms-list .chatrooms {
+	text-align: center;
+}
+
+.chatroom {
+	background-color: ghostwhite;
+	height: 1000px;
+	float: right;
+}
+
+.chatroom .message-input {
+	float: left;
+}

@@ -1,0 +1,36 @@
+<section class="jumbotron">
+	<h1 id="home-title">Chat Room</h1>
+	<p id="home-tagline">Exercise Your Right To Be Opinionated</p>
+	<p> 
+	This <strong> Single Page Application (SPA) </strong> was built using the <strong>AngularJS framework, FireBase NoSQL DB, and AngularFire. </strong>
+</section>
+
+<div class="col-md-3 sidebar">
+	<div class="header">
+		<p class="title">Chat Rooms</p>
+		<div class="new-chat-room">
+			<button class="btn btn-primary" ng-click="vm.openModal()"><strong>+</strong> New Chat Room</button>
+		</div>
+	</div>
+	
+	<section class="rooms-list">
+		<div ng-repeat="room in vm.chatRooms" class="chatrooms">
+			<a ng-click="vm.selectRoom(room)">{{ room.name }}</a>
+		</div>
+	</section>
+</div>
+
+<div class="col-md-9 chatroom">
+	<h3>{{ vm.selectedRoom.name }}</h3>
+	<p ng-repeat="message in vm.messages">
+		<strong>{{ message.username }} ({{ message.sentAt }}):</strong>  {{ message.content }}
+	</p>
+	
+	<form>
+		<div class="col-md-8 message-input">
+			<input type="text" placeholder="Write your message here..." class="form-control" ng-model="vm.newMessage">
+		</div>
+		<button class="col-md-1 btn btn-success" type="button" ng-click="vm.sendMessage()">Send</button>
+	</form>
+</div>
+
